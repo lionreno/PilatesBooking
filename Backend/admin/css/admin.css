@@ -1,0 +1,199 @@
+/* Admin styles for bookings and contacts tables */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: #0d0f12;
+  color: #f5f5f5;
+}
+
+.container {
+  width: min(1100px, 94%);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.admin-header {
+  background: #12151a;
+  border-bottom: 1px solid #1f252d;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.admin-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 700;
+  color: #f5f5f5;
+  letter-spacing: 0.3px;
+}
+
+.admin-nav {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.admin-nav a {
+  color: #f5f5f5;
+  text-decoration: none;
+  padding: 0.55rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.admin-nav a:hover,
+.admin-nav a.active {
+  background: #243041;
+  color: #ffffff;
+}
+
+main {
+  padding: 1.25rem 0 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.9rem;
+  color: #f5f5f5;
+}
+
+p {
+  margin: 0.75rem 0 0;
+  color: #d6d8dc;
+}
+
+.card {
+  background: #13171d;
+  border: 1px solid #1f252d;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta {
+  text-align: center;
+}
+
+.error-messages {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  background: #2b1b1b;
+  border: 1px solid #b64b4b;
+  color: #ffdede;
+  display: none;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 1rem;
+  border: 1px solid #1f252d;
+  border-radius: 10px;
+  background: #0f1319;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #f5f5f5;
+  min-width: 1200px;
+}
+
+table caption {
+  text-align: left;
+  font-weight: 700;
+  padding: 0.9rem 1rem 0.4rem;
+  color: #d6d8dc;
+}
+
+th,
+td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #1f252d;
+  text-align: left;
+}
+
+thead th {
+  background: #1a2029;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Column sizing */
+#bookings-table th:nth-child(1),
+#bookings-table td:nth-child(1),
+#messages-table th:nth-child(1),
+#messages-table td:nth-child(1) {
+  width: 60px;
+}
+
+#bookings-table th:nth-child(4),
+#bookings-table td:nth-child(4),
+#bookings-table th:nth-child(5),
+#bookings-table td:nth-child(5),
+#bookings-table th:nth-child(7),
+#bookings-table td:nth-child(7),
+#bookings-table th:nth-child(9),
+#bookings-table td:nth-child(9),
+#bookings-table th:nth-child(10),
+#bookings-table td:nth-child(10),
+#messages-table th:nth-child(4),
+#messages-table td:nth-child(4),
+#messages-table th:nth-child(7),
+#messages-table td:nth-child(7) {
+  white-space: nowrap;
+}
+
+#messages-table th:nth-child(6),
+#messages-table td:nth-child(6) {
+  min-width: 240px;
+}
+
+#bookings-table th:nth-child(9),
+#bookings-table td:nth-child(9) {
+  min-width: 400px;
+  white-space: wrap;
+
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  th,
+  td {
+    padding: 0.75rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  #bookings-table {
+    min-width: 1100px;
+  }
+
+  #messages-table {
+    min-width: 1000px;
+  }
+}
+
+@media (max-width: 576px) {
+  table {
+    min-width: 950px;
+  }
+}
+

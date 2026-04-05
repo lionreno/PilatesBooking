@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin — View Bookings</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <header class="admin-header">
+    <div class="container">
+      <div class="brand">Pure Balance Pilates — Admin</div>
+      <nav class="admin-nav">
+        <a href="view-bookings.html" class="active">Bookings</a>
+        <a href="view-contacts.html">Contacts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="card">
+        <h1>All Bookings</h1>
+        <p>View all submitted bookings from the database.</p>
+      </section>
+
+      <section>
+        <div id="loading" class="card cta">
+          <p>Loading bookings...</p>
+        </div>
+        <div id="error" class="error-messages"></div>
+        <div id="bookings-container" style="display: none;">
+          <div class="table-wrapper">
+            <table id="bookings-table">
+              <caption>Bookings List</caption>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Class Type</th>
+                  <th>Phone</th>
+                  <th>Participants</th>
+                  <th>Notes</th>
+                  <th>Submitted</th>
+                </tr>
+              </thead>
+              <tbody id="bookings-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/view-bookings.js" defer></script>
+</body>
+</html>
+
